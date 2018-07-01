@@ -1,0 +1,12 @@
+nav {
+  a {
+    //color: $dark-gray;
+  }
+  &.overlay {
+    a {
+      @include breakpoint(medium) {
+        color: $secondary-color;
+      }
+    }
+  }
+}

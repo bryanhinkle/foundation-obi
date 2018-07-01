@@ -1,0 +1,19 @@
+button, .button {
+  &--transparent {
+    background: transparent;
+    border: rem-calc(1px) $white solid;
+    &:hover {
+      background-color:rgba(white, .2);
+      transition: all .25s linear;
+    }
+  }
+  &--round {
+    display:inline-block;
+    position: relative;
+    top: 5px;
+    border-radius: 100%;
+    border: rem-calc(1px) $white solid;
+    margin-left: 10px;
+
+  }
+}

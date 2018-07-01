@@ -1,0 +1,49 @@
+.client {
+  padding: rem-calc(20px) 0;
+  img {
+    max-width: 60%;
+    @include breakpoint(medium) {
+      max-width: 80%;
+    }
+  }
+}
+.card {
+  padding: rem-calc(10px);
+}
+
+.vert-push {
+  @include breakpoint(medium) {
+    margin-top: rem-calc(-35px);
+  };
+}
+
+a {
+  color: $white;
+  &.om-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: rem-calc(14px);
+    background-color: darken($primary-color, 30%);
+    margin-top: rem-calc(-3px);
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    span {
+      display: none;
+      line-height: 1;
+      @include breakpoint(medium) {
+        display: flex;
+      };
+    }
+  }
+}
+.who-we-are {
+  .grid-y {
+  //  height: 100%;
+    @include breakpoint(medium) {
+      //height: 80%;
+    };
+  }
+}

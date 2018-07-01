@@ -1,0 +1,49 @@
+.box {
+  position: relative;
+  display: flex;
+  background: white;
+  border: 1px solid rgba(221,216,216,0.61);
+  box-shadow: 1px 0 2px 0 rgba(0,0,0,0.38);
+  vertical-align: top;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  //justify-content: center;
+  //align-items: center;
+  &:hover {
+    .box-detail {
+      z-index: 11;
+    }
+  }
+  img {
+    position: relative;
+    flex-shrink: 0;
+    max-height: rem-calc(280px);
+    max-width: none;
+  }
+  &-content { //&-detail
+    position: absolute;
+    display:flex;
+    width: 100%;
+    height: 100%;
+    /*top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;*/
+    padding: rem-calc(20px);
+    transition: all .25s ease-in;
+    background: -moz-linear-gradient(top, rgba($dark-blue,.75) 0%, rgba($dark-blue,0) 100%);
+    background: -webkit-linear-gradient(top, rgba($dark-blue,.75) 0%,rgba($dark-blue,0) 100%);
+    background: linear-gradient(to bottom, rgba($dark-blue,.75) 0%,rgba($dark-blue,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#366997', endColorstr='#007db9e8',GradientType=0 );
+    z-index: 1;
+    &:hover {
+      background-color: rgba($secondary-color, .9);
+      transition: all .25s ease-in;
+    }
+  }
+/*  &-detail {
+    display:none;
+    background-color: rgba($secondary-color, 1);
+    z-index: 0;
+  } */
+}

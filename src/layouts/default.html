@@ -1,0 +1,55 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olson Bros., Inc | Custom Homes &amp; Remodeling | San Francisco Bay Area </title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    {{#ifpage 'index'}}
+    <link rel="stylesheet" href="{{root}}assets/css/revolution.css">
+    <link rel="stylesheet" type="text/css" href="{{root}}assets/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    {{/ifpage}}
+
+<!-- REVOLUTION STYLE SHEETS -->
+
+    <!--link rel="stylesheet" type="text/css" href="{{root}}assets/revolution/fonts/font-awesome/css/font-awesome.css" -->
+      <!-- FONT AND STYLE FOR BASIC DOCUMENTS, NO NEED FOR FURTHER USAGE IN YOUR PROJECTS-->
+      <!--link href="http://fonts.googleapis.com/css?family=Roboto%3A700%2C300" rel="stylesheet" property="stylesheet" type="text/css" media="all" / -->
+      <!-- link rel="stylesheet" type="text/css" href="assets/css/noneed.css" -->
+  </head>
+  <body>
+    <h1 class="show-for-sr">Newmark Knight Frank San Francisco East Bay Investment Services</h1>
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas  data-transition="push">
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {{> navigation}}
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      {{> header}}
+
+      {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+      {{> body}}
+
+      {{> footer}}
+
+    </div>
+
+
+
+    <script src="{{root}}assets/js/app.js"></script>
+    {{#ifpage 'experience'}}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0AlRXiDA2la-Q2N5JAqE0KHUMvq4nZM0"></script>
+    <script src="{{root}}assets/js/InfoBox.js"></script>
+    <script src="{{root}}assets/js/Mapster.js"></script>
+    <script src="{{root}}assets/js/templates.js"></script>
+    <script src="{{root}}assets/js/ara-map.js"></script>
+    {{/ifpage}}
+
+
+  </body>
+</html>

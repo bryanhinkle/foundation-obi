@@ -1,0 +1,42 @@
+header[role="main"] {
+  width: 100%;
+  z-index: 100;
+  padding: rem-calc(20px) 0;
+  border-top: rem-calc(10px) $primary-color solid;
+  border-bottom: 1px $light-gray solid;
+  margin: 0 auto;
+  background-color: $white;
+
+  &.overlay {
+    position: absolute;
+    //margin: rem-calc(20px) auto;
+    background-color: transparent;
+    border-bottom: none;
+    a {
+      @include breakpoint(medium) {
+        color: $secondary-color;
+      }
+    }
+  }
+  nav {
+    a {
+      color: $primary-color;
+      @include breakpoint(medium) {
+        padding: rem-calc(12px) rem-calc(12px);
+      };
+      @include breakpoint(large) {
+        padding: rem-calc(12px) rem-calc(16px);
+      };
+    }
+  }
+}
+.icn-nav {
+  @include hamburger($dark-gray, darken($dark-gray, 5%), 25px, 25px, 2px, 4);
+  .overlay & {
+    @include hamburger($white, darken($white, 5%), 25px, 25px, 2px, 4);
+  }
+}
+.top-bar {
+  //@include top-bar-container;
+  //position: absolute;
+}
