@@ -52,5 +52,8 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import 'base/base';
+@import 'base/fonts';
 @import 'partials/header';
 @import 'partials/navigation';
+@import 'partials/hero';

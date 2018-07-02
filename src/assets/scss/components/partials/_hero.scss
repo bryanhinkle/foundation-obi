@@ -1,0 +1,29 @@
+.hero {
+  position: relative;
+}
+.intro {
+  position: absolute;
+  top: 0;
+  display: flex;
+  height: 100%;
+  z-index: 1;
+}
+.cover {
+  position: relative;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 0;
+  img {
+    position: relative;
+    flex: 0 1 auto;
+    min-height: 100vh;
+    max-width: none;
+    width: auto;
+    //height: 100%;
+
+  }
+}

@@ -1,14 +1,14 @@
 <header role="main" aria-label="primary"  class="{{header-class}}">
   <div class="grid-container">
-    <div class="grid-x top-bar">
-      <div class="auto show-for-small-only cell">
-        <div class="icn-nav" data-toggle="offCanvas"></div><!--button type="button" class="button" data-toggle="offCanvas">Open Menu</button -->
+    <div class="grid-x g align-middle">
+      <div class="small-5 medium-auto cell">
+        <img src="{{header-logo}}" />
       </div>
-      <div class="small-6 medium-9 cell show-for-medium">
+      <div class="small-6 cell show-for-medium">
         {{> navigation}}
       </div>
-      <div class="small-6 medium-auto cell">
-        <img src="{{header-logo}}" />
+      <div class="auto show-for-small-only cell flex-container align-right">
+        <div class="icn-nav" data-toggle="offCanvas"><img src="{{root}}/assets/img/btn-mobile-menu.png" alt=""></div><!--button type="button" class="button" data-toggle="offCanvas">Open Menu</button -->
       </div>
     </div>
   </div>

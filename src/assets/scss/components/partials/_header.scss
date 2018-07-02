@@ -31,12 +31,11 @@ header[role="main"] {
   }
 }
 .icn-nav {
-  @include hamburger($dark-gray, darken($dark-gray, 5%), 25px, 25px, 2px, 4);
+  //@include hamburger($dark-gray, darken($dark-gray, 5%), 25px, 25px, 2px, 4);
+  height: 100%;
+  width: rem-calc(30px);
+
   .overlay & {
-    @include hamburger($white, darken($white, 5%), 25px, 25px, 2px, 4);
+    //@include hamburger($white, darken($white, 5%), 25px, 25px, 2px, 4);
   }
-}
-.top-bar {
-  //@include top-bar-container;
-  //position: absolute;
 }
