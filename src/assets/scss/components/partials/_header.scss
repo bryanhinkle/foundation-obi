@@ -1,41 +1,48 @@
-header[role="main"] {
+header {
   width: 100%;
   z-index: 100;
-  padding: rem-calc(20px) 0;
   border-top: rem-calc(10px) $primary-color solid;
-  border-bottom: 1px $light-gray solid;
   margin: 0 auto;
-  background-color: $white;
-
-  &.overlay {
+  &[role="main"] {
     position: absolute;
-    //margin: rem-calc(20px) auto;
-    background-color: transparent;
-    border-bottom: none;
-    a {
-      @include breakpoint(medium) {
-        color: $secondary-color;
-      }
-    }
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.25) 50%, rgba(255,255,255,0) 100%);
+    padding: rem-calc(20px) 0 rem-calc(50px);
   }
-  nav {
-    a {
-      color: $primary-color;
-      @include breakpoint(medium) {
-        padding: rem-calc(12px) rem-calc(12px);
-      };
-      @include breakpoint(large) {
-        padding: rem-calc(12px) rem-calc(16px);
-      };
-    }
+  &[role="primary"]{
+    position: relative;
+    //border-bottom: 1px $light-gray solid;
+    //background: $white url('../img/bg-body-2.png') repeat-x;
+    padding: rem-calc(20px) 0 rem-calc(30px);
+    background: transparent
   }
 }
 .icn-nav {
-  //@include hamburger($dark-gray, darken($dark-gray, 5%), 25px, 25px, 2px, 4);
-  height: 100%;
-  width: rem-calc(30px);
-
-  .overlay & {
-    //@include hamburger($white, darken($white, 5%), 25px, 25px, 2px, 4);
+  height: rem-calc(25px);
+  width: rem-calc(25px);
+  @include breakpoint(medium) {
+    height: rem-calc(30px);
+    width: rem-calc(30px);
+  };
+}
+.icn-phone {
+  height: rem-calc(25px);
+  width: rem-calc(25px);
+  @include breakpoint(medium) {
+    height: rem-calc(30px);
+    width: rem-calc(30px);
+    margin-right: rem-calc(10px);
+  };
+}
+.phone-number {
+  color: $primary-color;
+  font-weight: bold;
+  font-size: rem-calc(18px);
+  margin-right: rem-calc(20px);
+  span {
+    display: inline-block;
+    margin-right: rem-calc(10px);
+    color: darken($secondary-color, 15%);
+    vertical-align: rem-calc(-2px);
   }
 }

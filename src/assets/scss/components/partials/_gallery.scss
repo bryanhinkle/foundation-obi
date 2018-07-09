@@ -1,0 +1,30 @@
+.gallery {
+  @include tabs-content;
+  margin-top: rem-calc(20px);
+  &-section {
+    @include tabs-panel;
+    padding: 0;
+  }
+  &-nav {
+    @include tabs-container;
+  }
+  &-title {
+    @include tabs-title;
+    width: 50%;
+    text-align: center;
+
+    a {
+      text-transform: uppercase;
+      font-weight: 300;
+      &:hover {
+        font-weight:900;
+      }
+    }
+  }
+  &-image {
+    border: 1px darken($light-gray, 13%) solid;
+  }
+  &-masonry {
+    margin-top: rem-calc(20px);
+  }
+}

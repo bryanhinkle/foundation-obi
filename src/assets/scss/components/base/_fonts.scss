@@ -2,19 +2,33 @@ p {
   //font-size: rem-calc(18px);
 }
 
-.section-title, .section-subtitle {
-  font-weight: bold;
-  &.inverse {
-    color: $white;
-  }
-}
 .intro-title {
   color: $white;
   font-size: rem-calc(48px);
   margin-bottom: rem-calc(10px);
-  font-weight: bold;  
+  font-weight: bold;
+  text-shadow: 0px 0px 20px $secondary-color;
+  @include breakpoint(medium) {
+    font-size: rem-calc(72px);
+  };
+}
+.page {
+  &-title {
+    font-size: rem-calc(36px);
+    text-transform: uppercase;
+    color: $secondary-color;
+    font-weight: 900;
+    margin:0 0 30px;
+    @include breakpoint(medium) {
+      margin-bottom:0;
+    };
+    span {
+      font-weight:300;
+    }
+  }
 }
 .section {
+  font-weight: bold;
   &-title {
     color: $primary-color;
     font-size: rem-calc(36px);
@@ -55,184 +69,26 @@ p {
     color:$white;
   }
 }
-.property {
+.project {
   &-title {
-    text-align: right;
-    color: $white;
-    font-family: $body-font-family;
-    &-name, &-address, &-city-state {
-      display:block;
-    }
-    &-name {
-      font-weight: bold;
-
-    }
-    &-address {
-      font-size:rem-calc(14px);
-    }
-    &-city-state {
-      font-size:rem-calc(14px);
-    }
-  }
-  &-status {
-    font-size: rem-calc(12px);
+    display: inline-block;
+    font-size: rem-calc(36px);
     text-transform: uppercase;
-    margin: rem-calc(3px) 0;
-    color: white;
-    font-weight: bold;
+    font-family: $body-font-family;
+    font-weight: 300;
+    margin-top: rem-calc(10px);
+    line-height: 1;
   }
-}
-.tile {
-  &-title {
+  &-address, &-city {
+    font-size:rem-calc(14px);
+  }&-desc {
+    margin-top: rem-calc(10px);
+  }
+  &-type {
     display: inline-block;
-    color: $success-color;
-    margin-bottom: rem-calc(10px);
+    font-size: rem-calc(18px);
+    color: $secondary-color;
+    text-transform: uppercase;
+    margin: 0 rem-calc(10px);
   }
-}
-.agent {
-  margin: 0 0 rem-calc(0);
-  &-name {
-    color: $white;//$secondary-color;
-    //font-family:$font-family-slab;
-    font-size:rem-calc(21px);
-    .agent-about &, .agent-resume & {
-      color: $black;
-    }
-  }
-  &-meta {
-    color: white;
-    font-size:rem-calc(16px);
-    font-style: italic;
-    .agent-about &, .agent-resume & {
-      color: $light-gray;
-    }
-  }
-  &-contact {
-    &.phone, &.email, &.secondary {
-      @include breakpoint(medium) {
-        color: $primary-color;
-        font-weight: bold;
-        font-size:rem-calc(15px);
-        &:hover {
-          color:$secondary-color;
-        }
-      };
-    }
-  }
-}
-.footer {
-  &-text {
-    display: inline-block;
-    font-size:rem-calc(10px);
-    color: darken($white, 50%);
-    &:hover {
-      color: $white;
-    }
-  }
-  &-link {
-    display: inline-block;
-    font-size:rem-calc(12px);
-    color: darken($white, 50%);
-    padding: 0 rem-calc(20px)
-    &:hover {
-      color: $white;
-    }
-  }
-  &-disclaimer, &-address {
-    @include breakpoint(medium) {
-      margin-top: rem-calc(10px);
-      font-size: rem-calc(10px);
-    };
-  }
-  &-title {
-    font-size: rem-calc(30px);
-    color: $light-gray;
-  }
-}
-i {
-  &.fa-3x {
-    font-size: rem-calc(21);
-    padding: rem-calc(10px) 0;
-    margin: 0 rem-calc(5px);
-    .agent-contact & {
-      color: $white;
-      @include breakpoint(medium) {
-        color: $primary-color;
-      };
-    }
-    @include breakpoint(medium) {
-      padding: 0;
-    };
-  }
-}
-ul {
-  .rev_slider & {
-    margin: 0;
-  }
-}
-.tp-caption.BigBold-Title,
-.BigBold-Title {
-    color: rgba(255, 255, 255, 1.00);
-    font-size: 110px;
-    line-height: 100px;
-    font-weight: 800;
-    font-style: normal;
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding: 10px 0px 10px 0;
-    text-decoration: none;
-    background-color: transparent;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0px;
-    border-radius: 0 0 0 0px;
-    text-align: left;
-    .pre, .post {
-      font-weight: 300;
-    }
-}
-.tp-caption.BigBold-SubTitle,
-.BigBold-SubTitle {
-    color: rgba(#f5ee91, 1);
-    font-size: 15px;
-    line-height: 24px;
-    font-weight: 500;
-    font-style: normal;
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding: 0 0 0 0px;
-    text-decoration: none;
-    background-color: transparent;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0px;
-    border-radius: 0 0 0 0px;
-    text-align: left;
-    letter-spacing: 1px
-}
-.tp-caption.BigBold-Button,
-.BigBold-Button {
-    color: rgba(255, 255, 255, 1.00);
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: 500;
-    font-style: normal;
-    font-family: Raleway;
-    padding: 15px 50px 15px 50px;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(255, 255, 255, 0.50);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 0px 0px 0px 0px;
-    text-align: left;
-    letter-spacing: 1px
-}
-.tp-caption.BigBold-Button:hover,
-.BigBold-Button:hover {
-    color: rgba(255, 255, 255, 1.00);
-    text-decoration: none;
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 1.00);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 0px 0px 0px 0px
 }

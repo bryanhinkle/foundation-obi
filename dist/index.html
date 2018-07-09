@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olson Bros., Inc | Custom Homes &amp; Remodeling | San Francisco Bay Area </title>
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/revolution.css">
-    <link rel="stylesheet" type="text/css" href="assets/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <script src="assets/js/masonry.pkgd.min.js"></script>
 
 <!-- REVOLUTION STYLE SHEETS -->
 
@@ -20,57 +19,79 @@
   <body>
     <h1 class="show-for-sr">Newmark Knight Frank San Francisco East Bay Investment Services</h1>
     <div class="off-canvas position-right" id="offCanvas" data-off-canvas  data-transition="push">
-      <button class="close-button" aria-label="Close menu" type="button" data-close>
-        <span aria-hidden="true">&times;</span>
-      </button>
       
       <nav role='navigation' aria-label='primary-nav' class="">
-        <ul class="vertical medium-horizontal menu align-right">
+        <ul class="vertical large-horizontal menu align-right">
           <li><a href="about.html">About</a></li>
-          <li><a href="work.html">Work</a></li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="services.html">Services</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="off-canvas-content" data-off-canvas-content>
-      <header role="main" aria-label="primary"  class="overlay">
+    <div class="off-canvas-content bg-mesh" data-off-canvas-content>
+      <header  role="main"  aria-label="primary">
         <div class="grid-container">
-          <div class="grid-x g align-middle">
-            <div class="small-5 medium-auto cell">
-              <img src="assets/img/img-obi-logo.png" />
+          <div class="grid-x grid-margin-x align-middle">
+            <div class="small-6 medium-auto cell">
+              <img src="assets/img/img-obi-logo.png"/>
             </div>
-            <div class="small-6 cell show-for-medium">
-              
-              <nav role='navigation' aria-label='primary-nav' class="">
-                <ul class="vertical medium-horizontal menu align-right">
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="work.html">Work</a></li>
-                  <li><a href="services.html">Services</a></li>
-                </ul>
-              </nav>
-            </div>
-            <div class="auto show-for-small-only cell flex-container align-right">
-              <div class="icn-nav" data-toggle="offCanvas"><img src="/assets/img/btn-mobile-menu.png" alt=""></div><!--button type="button" class="button" data-toggle="offCanvas">Open Menu</button -->
+            <div class="auto cell flex-container align-right align-middle">
+              <div class="phone-number flex-container align-middle">
+                <a href="tel:555-555-5555"><span class="show-for-medium">(555)222-3333</span><img class="icn-phone" src="/assets/img/icn-phone.png" alt=""></a>
+              </div>
+              <div class="icn-nav hide-for-large" data-toggle="offCanvas"><img src="/assets/img/btn-mobile-menu.png" alt=""></div>
+              <div class="show-for-large">
+                
+                <nav role='navigation' aria-label='primary-nav' class="">
+                  <ul class="vertical large-horizontal menu align-right">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
       
-      <div class="grid-x grid-padding-x hero align-center">
-        <div class="small-12 cell intro align-middle align-center text-center">
-          <h1 class="intro-title">We Still Build Things Like They Used To.</h1>
+      <section class="hero align-middle">
+        <div class="grid-container">
+          <div class="grid-x grid-margin-x align-middle intro">
+            <div class="small-12 cell text-center">
+              &nbsp;
+            </div>
+            <div class="small-12 medium-8 cell text-center">
+              <h1 class="intro-title">We Still Build Things Like They Used To.</h1>
+            </div>
+            <div class="small-12 cell text-center">
+              <a href="work.html" class="button button--transparent">See Our Work</a>
+            </div>
+          </div>
         </div>
-        <div class="small-12 cell cover">
-          <img data-interchange="[http://via.placeholder.com/1164x600, small], [http://via.placeholder.com/2880x1484, large]">
+        <div class="grid-container full">
+          <div class="grid-x grid-margin-x align-center align-middle">
+            <div class="small-12 cell cover">
+              <div class="overlay"></div>
+              <img class="hero-bg" data-interchange="[/assets/img/bg-home-1-sm.jpg, small], [/assets/img/bg-home-1-lg.jpg, large]">
+              <footer class="grid-container full">
+                <div class="grid-x grid-margin-x align-middle text-center">
+                  <div class="small-12 cell">
+                    <p class="footer-text footer-disclaimer"> &copy;2017 All Rights Reserved</p>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
       <!-- What We Do-->
-      <section class="section">
+      <!--section class="section">
         <div class="grid-container">
           <div class="grid-x grid-margin-x">
-            <!--header class="small-12 cell text-center">
+            <! - -header class="small-12 cell text-center">
               <h2 class="section-title">What We Do</h2>
               <h3 class="section-subtitle">Not All Buildings Are Skyscrapers</h3>
               <p class="section-desc">This is a block of text that gives a quick pitch to how awesome you guys are at selling  all types of buildings, not just the large stuff. </p>
@@ -80,7 +101,7 @@
                 <h4 class="box-title small-12 cell">Properties</h4>
                 <div class="box-desc small-12 cell">
                   <p>Review our portfolio of completed investment deals.</p>
-                  <a class="button button--transparent" href="/properties.html">View Properties</a>
+                  <a class="button button - -transparent" href="/properties.html">View Properties</a>
                 </div>
               </div>
               <img src="assets/img/img-available-props.jpg"/>
@@ -90,47 +111,23 @@
                 <h4 class="box-title small-12 cell">Experience</h4>
                 <div class="box-desc small-12 cell">
                   <p>Review our portfolio of completed investment deals.</p>
-                  <a class="button button--transparent" href="/experience.html">View Experience</a>
+                  <a class="button button- -transparent" href="/experience.html">View Experience</a>
                 </div>
               </div>
               <img src="assets/img/img-rep-exp.jpg"/>
             </div -->
-          </div>
+          <!-- /div>
         </div>
-      </section>
+      </section -->
       
 
-      <footer>
-        <div class="grid-container">
-          <div class="grid-x grid-margin-x align-center align-bottom text-center">
-            <div class="small-8 medium-3 cell">
-              <img src="assets/img/logo-nkf-wht.png" />
-            </div>
-            <div class="small-12 medium-9 cell">
-              <div class="grid-x grid-margin-x align-bottom">
-                <div class="small-12 medium-4 cell">
-                  <p class="footer-text footer-address"><i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>1333 N. California Blvd, Ste 343 | Walnut Creek, CA</p>
-                </div>
-                <div class="small-12 medium-4 cell">
-                  <a class="footer-link" href="tel:925-974-0100"><i class="fa fa-phone fa-3x" aria-hidden="true"></i></a>
-                  <a class="footer-link" href="https://nkf.re/NKFFbook"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-                  <a class="footer-link" href="https://nkf.re/NKFtwitter"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-                  <a class="footer-link" href="https://nkf.re/NKFLinkedin"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-                </div>
-                <div class="small-12 medium-4 cell">
-                  <p class="footer-text footer-disclaimer"> &copy;2017 All Rights Reserved</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
 
     </div>
 
 
 
     <script src="assets/js/app.js"></script>
+    <!--script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script -->
 
 
   </body>

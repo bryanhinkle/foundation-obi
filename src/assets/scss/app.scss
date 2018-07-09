@@ -47,13 +47,18 @@
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 
-// @include foundation-prototype-classes;
+@include foundation-prototype-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
 @import 'base/base';
 @import 'base/fonts';
+@import 'base/buttons';
 @import 'partials/header';
 @import 'partials/navigation';
 @import 'partials/hero';
+@import 'partials/gallery';
+@import 'partials/project';
+@import 'partials/footer';
+@import 'vendors/font-awesome';

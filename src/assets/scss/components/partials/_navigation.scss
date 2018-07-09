@@ -1,6 +1,11 @@
 nav {
   a {
-    //color: $dark-gray;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  li {
+
   }
   &.overlay {
     a {

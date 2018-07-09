@@ -1,14 +1,17 @@
-<header role="main" aria-label="primary"  class="{{header-class}}">
+<header {{#unlesspage 'index'}} role="primary" {{/unlesspage}}{{#ifpage 'index'}} role="main" {{/ifpage}} aria-label="primary">
   <div class="grid-container">
-    <div class="grid-x g align-middle">
-      <div class="small-5 medium-auto cell">
-        <img src="{{header-logo}}" />
+    <div class="grid-x grid-margin-x align-middle">
+      <div class="small-6 medium-auto cell">
+        <img src="{{header-logo}}"/>
       </div>
-      <div class="small-6 cell show-for-medium">
-        {{> navigation}}
-      </div>
-      <div class="auto show-for-small-only cell flex-container align-right">
-        <div class="icn-nav" data-toggle="offCanvas"><img src="{{root}}/assets/img/btn-mobile-menu.png" alt=""></div><!--button type="button" class="button" data-toggle="offCanvas">Open Menu</button -->
+      <div class="auto cell flex-container align-right align-middle">
+        <div class="phone-number flex-container align-middle">
+          <a href="tel:555-555-5555"><span class="show-for-medium">(555)222-3333</span><img class="icn-phone" src="{{root}}/assets/img/icn-phone.png" alt=""></a>
+        </div>
+        <div class="icn-nav hide-for-large" data-toggle="offCanvas"><img src="{{root}}/assets/img/btn-mobile-menu.png" alt=""></div>
+        <div class="show-for-large">
+          {{> navigation}}
+        </div>
       </div>
     </div>
   </div>

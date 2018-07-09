@@ -1,0 +1,14 @@
+.project-profile {
+  padding-left: 0;
+  margin-top: rem-calc(20px);
+  //border-top: 1px $light-gray solid;
+  //border-bottom: 1px $light-gray solid;
+  /*@include breakpoint(medium) {
+    border-bottom: none;
+    border-right: 1px $light-gray solid;
+  };*/
+  &-img {
+    width: 100%;
+    //margin-top: rem-calc(15px);
+  }
+}
